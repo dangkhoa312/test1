@@ -21,7 +21,7 @@ function validateForm(){
 
 
 function verifyPassword(input){
-    if(input.value != document.getElementById("confirmPassword").value){
+    if(input.value != document.getElementById("Rpassword").value){
         input.setCustomValidity("Password không trùng");
     }else{
         input.setCustomValidity("");
@@ -68,8 +68,8 @@ function emailExist(value){
 
   
 
-  
 
+    var tenDangNhap ="";
     function loginUser(){
         let loginEmail = document.getElementById("LEmail").value;
         let loginPass =  document.getElementById("Lpassword").value;
@@ -95,6 +95,7 @@ function emailExist(value){
             let data = localStorage.getItem('details');
             let parsedData = JSON.parse(data);
             let emailDangNhap ="";
+            tenDangNhap= loginEmail;
             for(let i = 0; i < parsedData.length; i++) {
                 if(parsedData[i].email ==loginEmail){
                     parsedData[i].trangThai = true; 
@@ -109,6 +110,7 @@ function emailExist(value){
             
             document.getElementById('show_info_user').style.display = "block";
             document.getElementById('info-user').innerHTML = '<span class="icon icon-user"></span>' + emailDangNhap + '<i class="pl-2 fa fa-angle-down cursor-pointer" aria-hidden="true"></i> <div class="show_info_user" style="display: none;"><a href="/edit.html">Tài khoản</a><a href="/logout">Đăng xuất</a></div>';
+            //document.getElementById('tenLogin').innerHTML = emailDangNhap;
             $("#mymodal").modal("hide");
             console.log("Login thành công");
             
@@ -122,6 +124,27 @@ function emailExist(value){
     loginForm.addEventListener("submit", function(e){
         e.preventDefault();
     });
+
+    function logOut(){
+        let data = localStorage.getItem('details');
+
+        let parsedData = JSON.parse(data);
+        let emailDangXuat = tenDangNhap;
+        for(let i = 0; i < parsedData.length; i++) {
+            if(parsedData[i].email == emailDangXuat){
+                parsedData[i].trangThai = false;
+                console.log(parsedData[i].trangThai); 
+                break;
+            }
+        }
+        localStorage.setItem("details", JSON.stringify(parsedData));
+        showHide("LoginBtt","info-user");
+        document.getElementById('show_info_user').style.display = "none";
+        localStorage.setItem('isLoggedIn', 'false');
+
+    }
+    
+   
 
     window.onload = function() {
         var isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -166,8 +189,13 @@ function emailExist(value){
         });
     });
 
+    window.addEventListener('beforeunload', function(event) {
+        // Đặt leavingPage thành true khi trang được làm mới
+        leavingPage = true;
+    })
+
     window.addEventListener('unload', function(event) {  
-        if (!leavingPage) {
+        if (leavingPage == false) {
             // Nếu không, đặt biến isLoggedIn thành false khi cửa sổ được đóng
             localStorage.setItem('isLoggedIn', 'false');
         }
@@ -175,20 +203,8 @@ function emailExist(value){
 
     
 
+    
+
 
   
-        // var toggleButton = document.getElementById("toggleButton");
-        // var infoUserDiv = document.getElementById("show_info_user");
-        
-        // toggleButton.addEventListener('click', function() {
-        //     infoUserDiv.style.display = infoUserDiv.style.display === 'none' ? 'block' : 'none';
-        // });
-
-        // document.getElementById("toggleButton").addEventListener("click", function() {
-        //     var infoUser = document.getElementById("show_info_user");
-        //     if (infoUser.style.display === "none" || infoUser.style.display === "") {
-        //         infoUser.style.display = "block";
-        //     } else {
-        //         infoUser.style.display = "none";
-        //     }
-        // });
+       

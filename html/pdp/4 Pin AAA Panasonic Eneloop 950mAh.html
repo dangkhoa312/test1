@@ -16,153 +16,153 @@
 
     <!-- <link rel="stylesheet" href="../../css/pdp/style.css"> -->
     <script src="../../js/LoginSignUp.js"></script>
-    <script src="../../js/Login&SignUp/Login&SignUp.js"></script>
+    <!-- <script src="../../js/Login&SignUp/Login&SignUp.js"></script> -->
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-    
-        <div  class="top-banner container px-0 px-lg-3">
-            <img src="../../img/Banner1.jpeg" 
-            class="img-responsive lazyload" 
-            width= "100%" 
-            height= "100%"" 
-            alt="top-banner">'
-        </div>
-            <div class="search-bar header-middle hidden-lg-down">
-                <div class="container">
-                    <div class="inner clearfix d-flex justify-content-between align-items-center ">
-                        <!-- Logo at the left -->
-                        <div id="logo">
-                            <a href="/"><img src="../../img/logo.png" alt="logo" class="img-responsive lazyload" width=9% height=9%></a>
-                        </div>
-            
-                        <!-- Search in the middle -->
-                        <div class="search">
-                            <form action="" method="GET" class="ng-pristine ng-valid">
-                                <div class="search-box">
-                                    <div class="input-group">
-                                        <!-- <button class="btn d-lg-none" type="submit"><span style="background: url('/assets/images/icons/search.svg') no-repeat center / contain"></span></button> -->
-                                        <input class="form-control input-sm ui-autocomplete-input on_wrap" name="q" placeholder="Nhập từ khóa cần tìm..." autocomplete="off" type="text">
-                                        <div class="input-group-append">        
-                                            <button class="btn d-lg-block d-none" type="submit">Tìm kiếm</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Đăng nhập (Login) at the right -->
-                        <div class="font-weight-light cursor-pointer" id="LoginBtt" ng-click="showLogin()">
-                          <a href="#" class="nav-link" id="btt-open">
-                            <span class="icon icon-user"></span>Đăng nhập</a>
-                        </div>
 
-                        <div class="font-weight-light font-weight-light cursor-pointer" style="display: none;" id="info-user"> <!-- d-lg-block -->
-                            <span class="icon icon-user"></span>
-                            <i class="pl-2 fa fa-angle-down" aria-hidden="true" id="toggleButton"></i>    
-                        </div>
-
-                        <div class="show_info_user" id="show_info_user">
-                            <a href="../uiTaiKhoan.html">Tài khoản</a>
-                            <a href="#">Đăng xuất</a>
+    <div class="wrapper">
+      <header>
+      
+          <div  class="top-banner container px-0 px-lg-3">
+              <img src="../../img/Banner1.jpeg" 
+              class="img-responsive lazyload" 
+              width= "100%" 
+              height= "100%"" 
+              alt="top-banner">'
+          </div>
+              <div class="search-bar header-middle hidden-lg-down">
+                  <div class="container">
+                      <div class="inner clearfix d-flex justify-content-between align-items-center ">
+                          <!-- Logo at the left -->
+                          <div id="logo">
+                              <a href="/"><img src="../../img/logo.png" alt="logo" class="img-responsive lazyload" width=9% height=9%></a>
+                          </div>
+              
+                          <!-- Search in the middle -->
+                          <div class="search">
+                              <form action="" method="GET" class="ng-pristine ng-valid">
+                                  <div class="search-box">
+                                      <div class="input-group">
+                                          <!-- <button class="btn d-lg-none" type="submit"><span style="background: url('/assets/images/icons/search.svg') no-repeat center / contain"></span></button> -->
+                                          <input class="form-control input-sm ui-autocomplete-input on_wrap" name="q" placeholder="Nhập từ khóa cần tìm..." autocomplete="off" type="text">
+                                          <div class="input-group-append">        
+                                              <button class="btn d-lg-block d-none" type="submit">Tìm kiếm</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                          <!-- Đăng nhập (Login) at the right -->
+                          <div class="font-weight-light cursor-pointer" id="LoginBtt" ng-click="showLogin()">
+                            <a href="#" class="nav-link" id="btt-open">
+                              <span class="icon icon-user"></span>Đăng nhập</a>
                           </div>
 
-                    </div>
-                </div>
-            </div>
+                          <div class="font-weight-light font-weight-light cursor-pointer" style="display: none;" id="info-user"> <!-- d-lg-block -->
+                              <span class="icon icon-user"></span>
+                              <i class="pl-2 fa fa-angle-down" aria-hidden="true" id="toggleButton"></i>    
+                          </div>
 
-            <div class="main_menu_area d-none d-lg-block">
-                <div class="container">
-                  <div class="row justify-content-between">
-                    <div class="col ml-auto d-flex align-self-center justify-content-end">
-                
-                      <div class="header_menu_right"><a href="../index.html">Trang Chủ</a></div>
-                      <div class="header_menu_right"><a href="../uiGioiThieu.html">Giới thiệu</a></div>                
+                          <div class="show_info_user" id="show_info_user">
+                              <a href="../uiTaiKhoan.html">Tài khoản</a>
+                              <a href="#" onclick="logOut()">Đăng xuất</a>
+                            </div>
+
+                      </div>
+                  </div>
+              </div>
+
+              <div class="main_menu_area d-none d-lg-block">
+                  <div class="container">
+                    <div class="row justify-content-between">
+                      <div class="col ml-auto d-flex align-self-center justify-content-end">
+                  
+                        <div class="header_menu_right"><a href="../index.html">Trang Chủ</a></div>
+                        <div class="header_menu_right"><a href="../uiGioiThieu.html">Giới thiệu</a></div>                
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div> 
+                </div> 
 
-             
-            
-        
-    </header>
-        <!-- --------------------------------------------FORM ĐĂNG NHẬP ------------------------------------------------------------------------>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="modal" id="mymodal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header justify-content-center text-center">
-                            
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form name="login" id="logIn" method="POST" class="form-control" onsubmit="return loginUser()" >
-                                <h5 class="modal-title text-center">Đăng nhập</h5>
-                                <div class="form-group">
-                                    <label for="LEmail">Email :</label>
-                                   <input type="email" class="form-control" id="LEmail" aria-describedby="EmailHelp" placeholder="Nhập email">
-                                    <small id="EmailHelp class="form-text text-muted">*</small>
-                                  </div>
-
-                                  
-                                <div class="form-group">
-                                  <label for="Lpassword">Mật khẩu :</label>
-                                  <input type="password" class="form-control" id="Lpassword" aria-describedby="PassHelp" placeholder="Nhập mật khẩu">
-                                  <small id="PassHelp" class="form-text text-muted">*</small>
-                                </div>
-
-                                
-
-                                <div class="form-group">
-                                    <!-- <a href="#" class="nav-link" id="btt-open2">Cần một tài khoản? Đăng ký</a> -->
-                                    <a href="#" class="float-left cursor-pointer text-primary" id="switchToRegister" onclick="showHide('registerForm','logIn')">Cần một tài khoản? Đăng ký</a>
-                                </div>
-                            
-                                <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
-                              </form>
-
-                              <form id="registerForm" method="POST" name="registration" class="form-control" style="display: none;" onsubmit="return validateForm();">                                    <div class="form-group">
-                                <h5 class="modal-title text-center">Đăng ký</h5>
-                                <label for="REmail">Email :</label> 
-                               <input type="email" class="form-control" id="REmail" aria-describedby="EmailHelp" placeholder="Nhập email"  oninput="emailExist(this)" required>
+               
+              
+          
+      </header>
+  <!-- --------------------------------------------FORM ĐĂNG NHẬP ------------------------------------------------------------------------>
+  <div class="row">
+    <div class="col-md-8">
+        <div class="modal" id="mymodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center text-center">
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="login" id="logIn" method="POST" class="form-control" onsubmit="return loginUser()" >
+                            <h5 class="modal-title text-center">Đăng nhập</h5>
+                            <div class="form-group">
+                                <label for="LEmail">Email :</label>
+                               <input type="email" class="form-control" id="LEmail" aria-describedby="EmailHelp" placeholder="Nhập email">
                                 <small id="EmailHelp class="form-text text-muted">*</small>
                               </div>
 
                               
                             <div class="form-group">
-                              <label for="Rpassword">Mật khẩu :</label>
-                              <input type="password" class="form-control" id="Rpassword" aria-describedby="PassHelp" placeholder="Nhập mật khẩu">
+                              <label for="Lpassword">Mật khẩu :</label>
+                              <input type="password" class="form-control" id="Lpassword" aria-describedby="PassHelp" placeholder="Nhập mật khẩu">
                               <small id="PassHelp" class="form-text text-muted">*</small>
-                            </div>
-
-                            <div class="form-group">
-                              <label for="confirmPassword">Xác nhận mật khẩu :</label>
-                              <input type="password" class="form-control" id="confirmPassword" aria-describedby="PassHelp" placeholder="Nhập mật khẩu" oninput="verifyPassword(this)" required>
-                              <small id="PassHelp" class="form-text text-muted">*</small>
-                            </div>
-
-                            <div class="form-group">
-                                <a href="#" class="float-left cursor-pointer text-primary" id="switchToLogin" onclick="showHide('logIn', 'registerForm')">Đã có tài khoản? Đăng nhập</a>
                             </div>
 
                             
+
+                            <div class="form-group">
+                                <!-- <a href="#" class="nav-link" id="btt-open2">Cần một tài khoản? Đăng ký</a> -->
+                                <a href="#" class="float-left cursor-pointer text-primary" id="switchToRegister" onclick="showHide('registerForm','logIn')">Cần một tài khoản? Đăng ký</a>
+                            </div>
                         
-                            <button type="submit" id="submit" class="btn btn-primary btn-block">Đăng ký</button>
+                            <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
                           </form>
+
+                          <form id="registerForm" method="POST" name="registration" class="form-control" style="display: none;" onsubmit="return validateForm();">                                    <div class="form-group">
+                            <h5 class="modal-title text-center">Đăng ký</h5>
+                            <label for="REmail">Email :</label> 
+                           <input type="email" class="form-control" id="REmail" aria-describedby="EmailHelp" placeholder="Nhập email"  oninput="emailExist(this)" required>
+                            <small id="EmailHelp class="form-text text-muted">*</small>
+                          </div>
+
+                          
+                        <div class="form-group">
+                          <label for="Rpassword">Mật khẩu :</label>
+                          <input type="password" class="form-control" id="Rpassword" aria-describedby="PassHelp" placeholder="Nhập mật khẩu">
+                          <small id="PassHelp" class="form-text text-muted">*</small>
                         </div>
-                        <div class="modal-footer">
-                           
-                        </div> 
+
+                        <div class="form-group">
+                          <label for="confirmPassword">Xác nhận mật khẩu :</label>
+                          <input type="password" class="form-control" id="confirmPassword" aria-describedby="PassHelp" placeholder="Nhập mật khẩu" oninput="verifyPassword(this)" required>
+                          <small id="PassHelp" class="form-text text-muted">*</small>
+                        </div>
+
+                        <div class="form-group">
+                            <a href="#" class="float-left cursor-pointer text-primary" id="switchToLogin" onclick="showHide('logIn', 'registerForm')">Đã có tài khoản? Đăng nhập</a>
+                        </div>
+
+                        
+                    
+                        <button type="submit" id="submit" class="btn btn-primary btn-block">Đăng ký</button>
+                      </form>
                     </div>
+                    <div class="modal-footer">
+                       
+                    </div> 
                 </div>
             </div>
         </div>
-    </div> 
-
+    </div>
+</div> 
     
         <main>
   
@@ -241,27 +241,10 @@
               <button type = "button" class = "btn">
                 Thêm vào giỏ hàng<i class = "fas fa-shopping-cart"></i>
               </button>
-              <!-- <button type = "button" class = "btn">Compare</button> -->
+              
             </div>
   
-            <!-- <div class = "social-links">
-              <p>Share At: </p>
-              <a href = "#">
-                <i class = "fab fa-facebook-f"></i>
-              </a>
-              <a href = "#">
-                <i class = "fab fa-twitter"></i>
-              </a>
-              <a href = "#">
-                <i class = "fab fa-instagram"></i>
-              </a>
-              <a href = "#">
-                <i class = "fab fa-whatsapp"></i>
-              </a>
-              <a href = "#">
-                <i class = "fab fa-pinterest"></i>
-              </a>
-            </div> -->
+           
           </div>
         </div>
       </div>
